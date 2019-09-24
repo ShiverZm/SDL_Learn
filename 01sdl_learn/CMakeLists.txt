@@ -1,0 +1,34 @@
+project (01sdl_learn)
+
+ADD_DEFINITIONS(-DUNICODE -D_UNICODE)
+
+#include header_files
+SET(SDL_INCLUDE ${PROJECT_SOURCE_DIR}/../lib/SDL2-2.0.9/)
+SET(EXTERN_INCLUDE ${PROJECT_SOURCE_DIR}/../include/)
+
+INCLUDE_DIRECTORIES (${SDL_INCLUDE} ${EXTERN_INCLUDE})
+
+#lib 
+IF(WIN32)
+	SET(SDL_LIB ${PROJECT_SOURCE_DIR}/../lib/SDL2-2.0.9/lib/x86)
+ELSE()
+	SET(SDL_LIB ${PROJECT_SOURCE_DIR}/../lib/SDL2-2.0.9/lib/x64)
+ENDIF(WIN32)
+
+LINK_DIRECTORIES(${SDL_LIB})
+LINK_LIBRARIES(SDL2 SDL2main SDL2test)
+
+FILE (GLOB header_files *.h)
+FILE (GLOB source_files *.c *.cpp)
+
+ADD_EXECUTABLE (01sdl_learn ${header_files} ${source_files})
+
+IF(WIN32)
+
+TARGET_LINK_LIBRARIES (01sdl_learn)
+
+ELSE()
+
+TARGET_LINK_LIBRARIES (01sdl_learn)
+
+ENDIF(WIN32)
