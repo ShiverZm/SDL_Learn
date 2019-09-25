@@ -22,7 +22,7 @@ LINK_DIRECTORIES(${SDL_LIB})
 LINK_LIBRARIES(SDL2 SDL2main SDL2test SDL2_image)
 
 #extension lib SDL_IMAGE
-LINK_LIBRARIES(SDL2_image)
+#LINK_LIBRARIES(SDL2_image)
 
 FILE (GLOB header_files *.h)
 FILE (GLOB source_files *.c *.cpp)
