@@ -1,8 +1,0 @@
-D:/vs2015/workspace/learn/sdl_learn/tmp/CMakeFiles/ALL_BUILD.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/CMakeFiles/ZERO_CHECK.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/01sdl_learn/CMakeFiles/01sdl_learn.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/01sdl_learn/CMakeFiles/ALL_BUILD.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/02sdl_learn/CMakeFiles/02sdl_learn.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/02sdl_learn/CMakeFiles/ALL_BUILD.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/03sdl_learn/CMakeFiles/03sdl_learn.dir
-D:/vs2015/workspace/learn/sdl_learn/tmp/03sdl_learn/CMakeFiles/ALL_BUILD.dir
