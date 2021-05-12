@@ -1,0 +1,32 @@
+project (SDL2_ShowYuv)
+
+ADD_DEFINITIONS(-DUNICODE -D_UNICODE)
+
+#include header_files
+SET(SDL_INCLUDE ${PROJECT_SOURCE_DIR}/../lib/SDL2-2.0.9/)
+SET(EXTERN_INCLUDE ${PROJECT_SOURCE_DIR}/../include/)
+
+
+INCLUDE_DIRECTORIES (${SDL_INCLUDE} ${EXTERN_INCLUDE})
+
+#lib 
+IF(WIN32)
+	SET(SDL_LIB ${PROJECT_SOURCE_DIR}/../lib/SDL2-2.0.9/lib/x86)
+ELSE()
+	SET(SDL_LIB ${PROJECT_SOURCE_DIR}/../lib/SDL2-2.0.9/lib/x64)
+ENDIF(WIN32)
+	
+LINK_DIRECTORIES(${SDL_LIB})
+
+#SDL2
+LINK_LIBRARIES(SDL2 SDL2main SDL2test SDL2_image)
+
+#extension lib SDL_IMAGE
+#LINK_LIBRARIES(SDL2_image)
+
+FILE (GLOB header_files *.h)
+FILE (GLOB source_files *.c *.cpp)
+
+ADD_EXECUTABLE (SDL2_ShowYuv ${header_files} ${source_files})
+
+TARGET_LINK_LIBRARIES (SDL2_ShowYuv)
