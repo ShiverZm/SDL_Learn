@@ -1,4 +1,4 @@
-project (SDL_ShowPic)
+project (SDL2_ShowPic)
 
 ADD_DEFINITIONS(-DUNICODE -D_UNICODE)
 
@@ -21,14 +21,14 @@ LINK_LIBRARIES(SDL2 SDL2main SDL2test SDL2_image)
 FILE (GLOB header_files *.h)
 FILE (GLOB source_files *.c *.cpp)
 
-ADD_EXECUTABLE (01sdl_learn ${header_files} ${source_files})
+ADD_EXECUTABLE (SDL2_ShowPic ${header_files} ${source_files})
 
 IF(WIN32)
 
-TARGET_LINK_LIBRARIES (01sdl_learn)
+TARGET_LINK_LIBRARIES (SDL2_ShowPic)
 
 ELSE()
 
-TARGET_LINK_LIBRARIES (01sdl_learn)
+TARGET_LINK_LIBRARIES (SDL2_ShowPic)
 
 ENDIF(WIN32)

@@ -1,4 +1,4 @@
-project (02sdl_learn)
+project (SDL2_AlignPic)
 
 ADD_DEFINITIONS(-DUNICODE -D_UNICODE)
 
@@ -16,11 +16,11 @@ ELSE()
 ENDIF(WIN32)
 
 LINK_DIRECTORIES(${SDL_LIB})
-LINK_LIBRARIES(SDL2 SDL2main SDL2test)
+LINK_LIBRARIES(SDL2 SDL2main SDL2test SDL2_Image)
 
 FILE (GLOB header_files *.h)
 FILE (GLOB source_files *.c *.cpp)
 
-ADD_EXECUTABLE (02sdl_learn ${header_files} ${source_files})
+ADD_EXECUTABLE (SDL2_AlignPic ${header_files} ${source_files})
 
-TARGET_LINK_LIBRARIES (02sdl_learn)
+TARGET_LINK_LIBRARIES (SDL2_AlignPic)

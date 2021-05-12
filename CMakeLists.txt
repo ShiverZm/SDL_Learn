@@ -1,7 +1,7 @@
 #
 project(SDL_Learn)
 
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.10)
 
 SET (CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/build/CMakeModules/;${CMAKE_MODULE_PATH}")
 
@@ -13,3 +13,4 @@ INCLUDE (globalsetting)
 add_subdirectory(01sdl_learn)
 add_subdirectory(02sdl_learn)
 add_subdirectory(03sdl_learn)
+add_subdirectory(08sdl_learn)

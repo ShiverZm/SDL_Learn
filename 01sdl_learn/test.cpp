@@ -38,7 +38,7 @@ int loadBMP() {
 		return 1;
 	}
 
-	std::string imagePath = "F:/workspace/project/vs2019/example/SDL_Learn/res/01sdl_learn/preview2.bmp";
+	std::string imagePath = "..\\..\\res\\01sdl_learn\\preview2.bmp";
 	//std::string imagePath = "D:\\workspace\\vs2015\\example\\sdl_learn\\res\\01sdl_learn\\preview2.jpg";
 
 	
