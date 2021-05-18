@@ -1,4 +1,4 @@
-project (SDL2_UseExLib)
+project (SDL2_UseEvent)
 
 ADD_DEFINITIONS(-DUNICODE -D_UNICODE)
 
@@ -27,6 +27,6 @@ LINK_LIBRARIES(SDL2 SDL2main SDL2test SDL2_image)
 FILE (GLOB header_files *.h)
 FILE (GLOB source_files *.c *.cpp)
 
-ADD_EXECUTABLE (SDL2_UseExLib ${header_files} ${source_files})
+ADD_EXECUTABLE (SDL2_UseEvent ${header_files} ${source_files})
 
-TARGET_LINK_LIBRARIES (SDL2_UseExLib)
+TARGET_LINK_LIBRARIES (SDL2_UseEvent)
