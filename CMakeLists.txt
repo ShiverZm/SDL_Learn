@@ -10,9 +10,11 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../bin)
 
 INCLUDE (globalsetting)
+
 add_subdirectory(01sdl_learn)
 add_subdirectory(02sdl_learn)
 add_subdirectory(03sdl_learn)
 add_subdirectory(04sdl_learn)
 add_subdirectory(05sdl_learn)
+add_subdirectory(06sdl_learn)
 add_subdirectory(09sdl_learn)
