@@ -108,7 +108,7 @@ int main(int argc, char* argv[])
 	SDL_Texture* sdlTexture = SDL_CreateTexture(sdlRenderer, pixformat, SDL_TEXTUREACCESS_STREAMING, pixel_w, pixel_h);
 
 	FILE* fp = NULL;
-	fp = fopen("..\\..\\res\\08sdl_learn\\test_yuv420p_320x180.yuv", "rb+");
+	fp = fopen("..\\..\\res\\09sdl_learn\\test_yuv420p_320x180.yuv", "rb+");
 
 	if (fp == NULL) {
 		printf("cannot open this file\n");
