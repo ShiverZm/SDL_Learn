@@ -21,7 +21,7 @@ public:
     static SDL_Texture* LoadImage(std::string file);
     //Render some text
     static SDL_Texture* RenderText(std::string strText, std::string file, SDL_Color color, int fontSize);
-    static void HandleEvents(const std::function<void(SDL_Event&)>& cbFunction);
+    static void HandleEvents(std::function<void(SDL_Event&)>cbEventFunction, std::function<void(void)>cbRenderFunction);
     //Clear window
     static void Clear();
     //Present renderer

@@ -120,8 +120,8 @@ SDL_Texture* Window::RenderText(std::string message, std::string fontFile, SDL_C
 
         SDL_Rect* clip = nullptr;
 
-        SDL_Rect pos = { Window::Box().w / 2 - 150 / 2,
-         Window::Box().h / 2 - 150 / 2, 150, 150 };
+        SDL_Rect pos = { m_pBox.x,m_pBox.y, m_pBox.w, m_pBox.h};
+
         //The angle to draw at, so we can play with it
         int angle = 0;
 
@@ -132,13 +132,14 @@ SDL_Texture* Window::RenderText(std::string message, std::string fontFile, SDL_C
         return texture;
 }
 
-void Window::HandleEvents(const std::function<void(SDL_Event&)> &cbFunction) {
+void Window::HandleEvents(std::function<void(SDL_Event&)>cbEventFunction, std::function<void(void)>cbRenderFunction = nullptr) {
     m_eventQuit = false;
     SDL_Event e;
     while (!m_eventQuit) {
         while (SDL_PollEvent(&e)) {
-            cbFunction(e);
+            cbEventFunction(e);
         }
+        cbRenderFunction();
     }
 }
 void Window::Clear(){
