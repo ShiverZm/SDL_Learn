@@ -75,9 +75,5 @@ void main() {
         SDL_RenderPresent(Window::m_pRenderer.get());
     }
     );
-
-
-    
-
-    system("pause");
+    Window::Quit();
 }
