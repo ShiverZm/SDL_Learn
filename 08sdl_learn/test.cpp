@@ -12,7 +12,7 @@
 void main() {
     Window::Init("timer");
     //Our timer:
-    Timer *timer = new Timer;
+    Timer timer;
 
     //Textures to display a message and ticks elapsed
     SDL_Texture* msg = nullptr, * ticks = nullptr;
@@ -30,7 +30,7 @@ void main() {
     msg = Window::RenderText("Press Enter to Reset Start Time. ", "..\\..\\res\\06sdl_learn\\sample.ttf",
         white, 30);
 
-    Window::HandleEvents([timer,white](SDL_Event e) {
+    Window::HandleEvents([&timer,white](SDL_Event e) {
 
         if (e.type == SDL_QUIT)
         {
@@ -40,20 +40,20 @@ void main() {
             Window::m_eventQuit = true;
         }else if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_RETURN)
         {
-            timer->Start();
+            timer.Start();
         }else if (e.type == SDL_KEYDOWN && e.key.keysym.sym == SDLK_SPACE)
         {
-            if (!timer->Paused()) {
-                timer->Pause();
+            if (!timer.Paused()) {
+                timer.Pause();
             }
             else {
-                timer->Unpause();
+                timer.Unpause();
             }
         }
 
-    },[timer,white]() {
+    },[&timer,white]() {
 
-        if (timer->Started()) {
+        if (timer.Started()) {
 
             Window::m_pBox.x = 0;
             Window::m_pBox.y = 200;
@@ -63,7 +63,7 @@ void main() {
             Window::Clear();
             std::stringstream ssTicks;
             ssTicks << "Since start time ";
-            ssTicks << timer->Ticks();
+            ssTicks << timer.Ticks();
             ssTicks << " ";
             ssTicks << "ms";
             Window::RenderText(ssTicks.str(), "..\\..\\res\\06sdl_learn\\sample.ttf",
